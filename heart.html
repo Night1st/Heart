@@ -70,6 +70,12 @@
             100% {opacity: 0;}
         }
 
+        @keyframes fadedIn {
+            0% {opacity: 0;}
+
+            100% {opacity: 1;}
+        }
+
         button {
             width: 50px; 
             height: 50px; 
@@ -79,28 +85,13 @@
             background-color: pink
         }
 
-        .center-text {
-            background-color:rgb(0, 0, 0);
-            width: 100%;
-            opacity: 0;
-            color: rgb(225, 12, 168);
-            height:100%;
-            font-size: 31px;
-            font-style: italic;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-
         .text1 {
             position: absolute;
             left: 0;
             right: 0;
             font-family: 'Brush Script MT', cursive;
             text-align: center;
-            color:rgb(225, 12, 168);
+            color:pink;
         }
         .text2 {
             position: absolute;
@@ -110,7 +101,7 @@
             right: 0;
             font-family: 'Brush Script MT', cursive;
             text-align: center;
-            color:rgb(225, 12, 168);
+            color: pink;
         }
 
         h2 {
@@ -123,7 +114,7 @@
     <div>
         <button id="love"><i class="fa fa-heart" style="font-size:24px;color:red;"></i></button>
         <div id="text1" class="text1">
-            <h2>Hello bạn Kỳ Giai của tui! </h2>
+            <h2>Hello bạn Kỳ Giai của tui!</h2>
             <h2>Đối với tui, có thể nói tui giỏi trong việc học tập, nhưng khả năng xã hội của tui hơi kém á, nên tui thừa nhận là tui có hơi ngây ngô với khờ khạo như bắp ngô v á.</h2>
             <h2>Tui kiểu hay gặp xui xẻo và ko có duyên trong mấy chuyện tình cảm cho lắm, nên có lúc nghĩ rằng tui ko có hợp để có 1 tình yêu đẹp.</h2>
             <h2>Cho tới khi bạn đến....</h2>
@@ -135,7 +126,6 @@
         </div>
         <canvas id="blueboard" class="notBeat"></canvas>
         <canvas id="pinkboard" class="beat"></canvas>
-        <div id="center-text" class="center-text">Kỳ Giai
         </div>
     </div>
     <script>
@@ -147,7 +137,6 @@
             const pink = document.getElementById('pinkboard')
             const text1 = document.getElementById('text1')
             const text2 = document.getElementById('text2')
-            const centerText = document.getElementById('center-text')
             blue.classList.add('animateFadedOut')
             pink.classList.add('animateFadedIn')
             text1.classList.add('animateFadedOut')
